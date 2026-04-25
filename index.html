@@ -1,103 +1,275 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NKZD Labs | Agentic Intelligence & Enterprise Data</title>
+    <meta name="description" content="NKZD Labs: Bridging the gap between Enterprise Data and Agentic Intelligence. A PhD-led AI consultancy.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-<div class="home">
-  <table cellspacing="30" width=100%>
-    <tr>
+    <!-- Tailwind Config for Customizations -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        accent: {
+                            400: '#34d399', // Emerald 400
+                            500: '#10b981', // Emerald 500
+                            600: '#059669', // Emerald 600
+                            900: '#064e3b', // Emerald 900
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
 
-        <!-- Left Column -->
-        <td valign="top" width=48% height=0>
-            <!-- Photo -->
-            <p align="center">
-                <img align="center" height=50% width=50% src="images/nnikzad_cropped.png">
+    <style>
+        /* Custom utilities */
+        .glass-panel {
+            background: rgba(24, 24, 27, 0.6); /* zinc-900 with opacity */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 40px rgba(52, 211, 153, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-300 font-sans antialiased selection:bg-accent-500/30 selection:text-white relative min-h-screen">
+
+    <!-- Ambient Background Effects -->
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-accent-900/20 blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-indigo-900/10 blur-[120px]"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-panel border-b-0 border-zinc-800/50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i data-lucide="hexagon" class="text-accent-400 w-6 h-6"></i>
+                <span class="text-zinc-100 font-semibold tracking-wide text-lg">NKZD<span class="text-zinc-500">LABS</span></span>
+            </div>
+            <a href="#contact" class="text-sm font-medium text-zinc-300 hover:text-white transition-colors duration-200">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative z-10 pt-32 pb-16 px-6 max-w-6xl mx-auto space-y-32">
+
+        <!-- 1. Hero Section -->
+        <section class="min-h-[70vh] flex flex-col justify-center items-start">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-accent-500/20 bg-accent-500/5 text-accent-400 text-xs font-medium uppercase tracking-wider mb-8">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-500"></span>
+                </span>
+                <span>Elite AI Consultancy</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight leading-tight mb-6 glow-text">
+                Solving the Reliability Gap in <br class="hidden md:block"/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-emerald-600">Agentic AI</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-zinc-400 max-w-2xl leading-relaxed mb-10">
+                NKZD Labs: Mastering Zero-drift Dynamics to bring Determinism to Enterprise AI. We specialize in fine-tuning, autonomous workflows, and model reliability for organizations ready to move beyond the hype.
             </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white text-zinc-950 font-medium hover:bg-zinc-200 transition-colors duration-200">
+                    Discuss Your Strategy
+                    <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                </a>
+                <a href="#offerings" class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-zinc-800 text-white hover:bg-zinc-900 transition-colors duration-200">
+                    Explore Capabilities
+                </a>
+            </div>
+        </section>
 
-            <p>            
-                <a href="https://scholar.google.com/citations?user=bSlYI1cAAAAJ&hl=en">Google Scholar Profile</a>
-                </br>
-                <a href="./files/Nikzad_STSI_CV.pdf">CV</a>
+
+
+        <!-- 3. Core Offerings -->
+        <section id="offerings" class="scroll-mt-32">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Core Capabilities</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Offering 1 -->
+                <div class="glass-panel p-8 rounded-2xl hover:border-accent-500/30 transition-colors duration-300 group">
+                    <div class="w-12 h-12 rounded-lg bg-zinc-900 flex items-center justify-center border border-zinc-800 mb-6 group-hover:border-accent-500/50 transition-colors">
+                        <i data-lucide="database" class="text-accent-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Knowledge Prep & Data Strategy</h3>
+                    <p class="text-zinc-400 leading-relaxed text-sm mb-4">
+                        Transforming fragmented enterprise silos into structured knowledge graphs and synthetic datasets for high-fidelity agentic workflows.
+                    </p>
+                    <ul class="space-y-2 text-xs text-zinc-400">
+                        <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-accent-500 mr-2 shrink-0 mt-0.5"></i> <span>Maintain strict data sovereignty & IP ownership</span></li>
+                        <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-accent-500 mr-2 shrink-0 mt-0.5"></i> <span>Eliminate hallucination risks through structured retrieval</span></li>
+                        <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-accent-500 mr-2 shrink-0 mt-0.5"></i> <span>Create proprietary datasets to train custom models</span></li>
+                    </ul>
+                </div>
+
+                <!-- Offering 2 -->
+                <div class="glass-panel p-8 rounded-2xl hover:border-accent-500/30 transition-colors duration-300 group">
+                    <div class="w-12 h-12 rounded-lg bg-zinc-900 flex items-center justify-center border border-zinc-800 mb-6 group-hover:border-accent-500/50 transition-colors">
+                        <i data-lucide="cpu" class="text-accent-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Custom LLM Fine-Tuning</h3>
+                    <p class="text-zinc-400 leading-relaxed text-sm mb-4">
+                        We build, fine-tune, and deploy custom open-weights models specifically tailored to your domain logic and workflows.
+                    </p>
+                    <ul class="space-y-2 text-xs text-zinc-400">
+                        <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-accent-500 mr-2 shrink-0 mt-0.5"></i> <span>Achieve highly predictable, drastically reduced inference costs</span></li>
+                        <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-accent-500 mr-2 shrink-0 mt-0.5"></i> <span>Unmatched determinism and performance on specialized tasks</span></li>
+                        <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-accent-500 mr-2 shrink-0 mt-0.5"></i> <span>Complete ownership of your models without vendor lock-in</span></li>
+                    </ul>
+                </div>
+
+                <!-- Offering 3 -->
+                <div class="glass-panel p-8 rounded-2xl hover:border-accent-500/30 transition-colors duration-300 group">
+                    <div class="w-12 h-12 rounded-lg bg-zinc-900 flex items-center justify-center border border-zinc-800 mb-6 group-hover:border-accent-500/50 transition-colors">
+                        <i data-lucide="shield-check" class="text-accent-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">LLMOps & Managed Maintenance</h3>
+                    <p class="text-zinc-400 leading-relaxed text-sm">
+                        Continuous monitoring for model drift, cost optimization of inference, and the deployment of "Guardian Agents" for safety and quality control.
+                    </p>
+                </div>
+
+                <!-- Offering 4 -->
+                <div class="glass-panel p-8 rounded-2xl hover:border-accent-500/30 transition-colors duration-300 group">
+                    <div class="w-12 h-12 rounded-lg bg-zinc-900 flex items-center justify-center border border-zinc-800 mb-6 group-hover:border-accent-500/50 transition-colors">
+                        <i data-lucide="search" class="text-accent-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Answer Engine Optimization (AEO)</h3>
+                    <p class="text-zinc-400 leading-relaxed text-sm">
+                        Ensuring your brand’s digital footprint is optimized for discovery and citation by modern Answer Engines like Perplexity, Gemini, and SearchGPT.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The NKZD Framework (DNA) -->
+        <section class="py-12 border-y border-zinc-800/50 bg-zinc-900/30 -mx-6 px-6 md:mx-0 md:px-12 md:rounded-3xl">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-xl md:text-2xl font-bold text-white mb-4">The NKZD Framework</h2>
+                <p class="text-sm text-zinc-500 mb-10 leading-relaxed italic">
+                    People ask about the name. NKZD is a derivative of our founder, Nima Nikzad—but it also represents the core framework we bring to every project:
+                </p>
+                
+                <div class="space-y-8">
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start">
+                        <div class="text-3xl font-bold text-accent-500 w-12 shrink-0">N</div>
+                        <div>
+                            <h3 class="text-lg font-medium text-zinc-200 mb-1">Neural</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">We don't just "prompt"—we understand the underlying architecture to select and fine-tune the right model for the job.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start">
+                        <div class="text-3xl font-bold text-accent-500 w-12 shrink-0">K</div>
+                        <div>
+                            <h3 class="text-lg font-medium text-zinc-200 mb-1">Knowledge</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">AI is only as good as the data. We transform messy enterprise silos into structured, retrievable intelligence.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start">
+                        <div class="text-3xl font-bold text-accent-500 w-12 shrink-0">Z</div>
+                        <div>
+                            <h3 class="text-lg font-medium text-zinc-200 mb-1">Zero-drift</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">Most AI projects fail after 3 months. We build systems that monitor, self-correct, and stay accurate as your business evolves.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start">
+                        <div class="text-3xl font-bold text-accent-500 w-12 shrink-0">D</div>
+                        <div>
+                            <h3 class="text-lg font-medium text-zinc-200 mb-1">Dynamics</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">We move beyond static chatbots into autonomous, multi-agent workflows that actually do work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Philosophy -->
+        <section class="glass-panel rounded-3xl p-8 md:p-12 relative overflow-hidden border border-zinc-800">
+            <!-- Subtle background pattern -->
+            <div class="absolute right-0 top-0 opacity-5 pointer-events-none translate-x-1/3 -translate-y-1/3">
+                <i data-lucide="fingerprint" class="w-96 h-96"></i>
+            </div>
+            
+            <div class="relative z-10 max-w-3xl">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Rigorous Engineering, Not Hype.</h2>
+                <p class="text-zinc-400 text-lg leading-relaxed mb-6">
+                    NKZD Labs operates as an agile team bringing together domain experts and specialized engineers to tackle complex AI challenges. We approach artificial intelligence not as a magic bullet, but as a robust software engineering discipline.
+                </p>
+                <p class="text-zinc-400 text-lg leading-relaxed">
+                    Our philosophy centers on utility, security, and measurable ROI. We build robust systems that solve actual enterprise problems, eschewing fragile prototypes for production-ready, highly reliable architectures.
+                </p>
+            </div>
+        </section>
+
+        <!-- 5. Contact / CTA -->
+        <section id="contact" class="text-center py-20 scroll-mt-32">
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to Operationalize AI?</h2>
+            <p class="text-zinc-400 mb-10 max-w-xl mx-auto text-lg">
+                Connect with us to discuss how agentic workflows and fine-tuned models can accelerate your enterprise.
             </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="mailto:hello@nkzdlabs.com" class="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-accent-500 text-zinc-950 font-semibold hover:bg-accent-400 transition-colors duration-200 shadow-[0_0_20px_rgba(16,185,129,0.3)] w-full sm:w-auto">
+                    <i data-lucide="mail" class="mr-2 w-5 h-5"></i>
+                    Email Us
+                </a>
+                <!-- <a href="https://linkedin.com/company/placeholder" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-zinc-700 text-white hover:bg-zinc-800 transition-colors duration-200 w-full sm:w-auto">
+                    <i data-lucide="linkedin" class="mr-2 w-5 h-5"></i>
+                    LinkedIn
+                </a> -->
+            </div>
+        </section>
 
-            <!-- Recent News -->
-            <h3>Recent News</h3>
-            <p align="justify">
-                <li><b>Dec 11, 2015:</b> Our paper "Managing the Energy-Delay Tradeoff in Mobile Applications with Tempus" was awarded the <b>Best Paper Award</b> at Middleware 2015!</li>
-                <li><b>Jul 29, 2015:</b> Began my new appointment at the Scripps Translational Science institute!</li>
-            </p>
-        </td>
+    </main>
 
-        <!-- Right Column -->
-        <td valign="top" width=48% height=0>
-            <h2>About Me</h2>
-            <p align="justify">
-                I am currently the Viterbi Fellow of Digital Medicine at the Scripps Translational Science Institute, where I am kick-starting new research and engineering efforts related to the use of wearable and passive sensing devices in healthcare.
-                As the first engineer to be working on mHealth related efforts at STSI, I work closely with a team of physicians and statisticians across STSI and the Scripps Health hospital system and provide broad technical guidance to both ongoing and planned projects.
-                I believe that patient collected data, from outside the clinical setting, will play a major role in ensuring that the future of medical care is both scalable and affordable.
-                My research focuses on the development of new sensing devices (particularly those related to air quality and respiratory health monitoring) and analytical techniques for turning the data collected by everyday people, using consumer devices, into actionable information for physicians.
-            </p>
-            <p align="justify">
-                I completed my PhD studies in the <a href="http://www.cs.ucsd.edu">Computer Science and Engineering Department</a> at the <a href="http://www.ucsd.edu/">University fo California, San Diego</a> in 2015.
-                I was advised by <a href="http://cseweb.ucsd.edu/~wgg">William Griswold</a>. 
-                I graduated from the University of California, Los Angeles in the Spring of 2009 with a degree in Computer Science.  While at UCLA, I was a CENS Intel Scholar and did research at the <a href="http://research.cens.ucla.edu">Center for Embedded Networked Sensing</a>.
-            </p>
-            <p align="justify">
-                During graduate school, I primarily worked on two large research efforts. Much of my dissertation was based on my work on APE, or Annotated Programming for Energy-efficiency, an annotation language and middleware runtime service that eases the development of energy-management policies for use in Android applications. Much of this work was motivied by previous work on the <a href="https://sosa.ucsd.edu/confluence/pages/viewpage.action?pageId=8257538">CitiSense</a> project, which tracked individual exposure to air pollution through an complete, end-to-end monitoring system: a body-worn sensor board, a mobile phone application for presenting feedback to users, and a back-end server for presenting personal exposure history and further analysis.
-            </p>
-        </td>
+    <!-- Footer -->
+    <footer class="border-t border-zinc-900 bg-zinc-950/50 py-12 relative z-10">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div class="flex flex-col space-y-2 text-zinc-500">
+                <div class="flex items-center space-x-2 text-zinc-300 font-medium">
+                    <i data-lucide="hexagon" class="w-5 h-5 text-accent-500"></i>
+                    <span>NKZD Labs <span class="text-zinc-600 font-light mx-2">|</span> Neural Knowledge Zero-drift Dynamics</span>
+                </div>
+                <div class="text-sm">
+                    Founded by Nima Nikzad, PhD.
+                </div>
+                <div class="text-xs text-zinc-600 pt-4">
+                    © 2026 NKZD Labs. All rights reserved. Built for the Agentic Web.
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    </tr>  
-  </table>
-
-        <h2>Selected Publications</h2>
-        <h3> Conferences </h3>
-        <li> <b>Nima Nikzad</b>, Marjan Radi, Octav Chipara, and William G. Griswold, <a href="http://homepage.cs.uiowa.edu/~ochipara/papers/middleware15.pdf">"Managing the Energy-Delay Tradeoff in Mobile Applications with Tempus"</a>, ACM/IFIP/USENIX Middleware 2015. <b><i>Best Paper Award</b></i></li>
-        </br>
-        <li> <b>Nima Nikzad</b>, Octav Chipara, and William G. Griswold, <a href="./files/icse2014.pdf">"APE: An Annotation Language and Middleware for Energy-Efficient Mobile Application Development"</a>, International Conference on Software Engineering (ICSE) 2014.</li>
-        </br>
-        <li> Celal Ziftci, <b>Nima Nikzad</b>, Nakul Verma, Piero Zappi, Elizabeth Bales, Ingolf Krueger and William G. Griswold, “Citisense: Mobile Air Quality Sensing for Individuals and Communities”, OOPSLA 2012 Demo Session, 2012.</li>
-        </br>
-        <li> <b>Nima Nikzad</b>, Nakul Verma, Celal Ziftci, Elizabeth Bales, Nichole Quick, Piero Zappi, Kevin Patrick, Sanjoy Dasgupta, Ingolf Krueger, Tajana Simunic Rosing, William G. Griswold. "CitiSense: Improving Geospatial Environmental Assessment of Air Quality Using a Wireless Personal Exposure Monitoring System". Wireless Health 2012. <b><i>Best Paper Award</i></b></li>
-        </br>
-        <li> <b>Nima Nikzad</b>, Jinseok Yang, Piero Zappi, Tajana Simunic Rosing, Dilip Krishnaswamy. "Model-driven Adaptive Wireless Sensing for Environmental Healthcare Feedback Systems". IEEE International Conference on Communications (ICC) 2012. </li>
-        </br>
-        <li> Elizabeth Bales, <b>Nima Nikzad</b>, Nichole Quick, Celal Ziftci, Kevin Patrick and William Griswold. "Citisense: Mobile Air Quality Sensing for Individuals and Communities", Poster and short paper, PervasiveHealth 2012.</li>
-
-        </br>
-
-	<h3>Journals</h3>
-	<li>Ju Young Kim, Nathan E Wineinger, Michael Taitel, Jennifer M Radin, Osayi Akinbosoye, Jenny Jiang, <b>Nima Nikzad</b>, Gregory Orr, Eric Topol, and Steve Steinhubl. "Self-Monitoring Utilization Patterns Among Individuals in an Incentivized Program for Healthy Behaviors", J Med Internet Res 2016;18(11):e292 DOI: 10.2196/jmir.6371</li>
-
-	</br>
-
-        <h3> Technical Reports </h3>
-        <li> Elizabeth Bales, <b>Nima Nikzad</b>, Celal Zifci, Nichole Quick, William Griswold, and Kevin Patrick, "Personal Pollution Monitoring: Mobile Real-Time Air-Quality in Daily Life", UCSD CSE Technical report CS2014-1005, 2014.</li>
-        </br>
-        <li> <b>Nima Nikzad</b>, Celal Ziftci, Piero Zappi, Nichole Quick, Priti Aghera, Nakul Verma, Barry Demchak, Kevin Patrick, Hovav Shacham, Tajana S Rosing, Ingolf Krueger, William G Griswold, Sanjoy Dasgupta, "CitiSense - Adaptive Services for Community-Driven Behavioral and Environmental Monitoring to Induce Change", UCSD CSE Technical report CS2011-0961, 2011. </li>
-
-        </br>
-
-        <h3> Book Chapters </h3>
-        <li> <b>Nima Nikzad</b>, Priti Aghera, Piero Zappi, Tajana S Rosing, "Energy Management in Heterogeneous Wireless Health Care Networks", in Energy-Efficient Distributed Computing Systems, Edited by Albert Y. Zomaya, Young Choon Lee, John Wiley & Sons, Inc, 2012.</li>
-
-        </br>
-
-  <!-- Comment out the boiler plate...
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-  -->
-
-</div>
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
